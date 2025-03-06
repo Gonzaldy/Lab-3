@@ -35,4 +35,4 @@ jobs:
         run: mvn -f lab3/pom.xml clean install
       # Run tests
       - name: Run Tests
-        run: mvn test
+        run: mvn -f lab3/pom.xml test
