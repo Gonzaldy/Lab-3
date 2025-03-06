@@ -22,6 +22,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '23'
+      # Install Maven
+      - name: Install Maven
+        run: |
+          sudo apt-get update
+          sudo apt-get install maven
       # Maven Setup
       - name: Maven Setup
         uses: actions/setup-java@v3
