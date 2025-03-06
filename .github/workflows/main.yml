@@ -27,9 +27,12 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install maven
+      # Navigate to the lab3 directory
+      - name: Change directory to lab3
+        run: cd lab3
       # Build with Maven
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn -f lab3/pom.xml clean install
       # Run tests
       - name: Run Tests
         run: mvn test
