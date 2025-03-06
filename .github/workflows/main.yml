@@ -27,11 +27,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install maven
-      # Maven Setup
-      - name: Maven Setup
-        uses: actions/setup-java@v3
-        with:
-          maven-version: '3.9.1'
       # Build with Maven
       - name: Build with Maven
         run: mvn clean install
